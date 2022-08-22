@@ -1,0 +1,41 @@
+=>CHAR LENGTH (Counts Characters in String)
+
+Syntax
+
+SELECT CHAR_LENGTH('Hello World');
+
+_________________________________________________________
+
+SELECT CHAR_LENGTH('Data Land Technology');
+
+_________________________________________________________
+
+
+SELECT * FROM persons;
+
+SELECT CHAR_LENGTH(firstname) FROM persons;
+
+SELECT firstname,CHAR_LENGTH(firstname) FORM persons;
+
+SELECT firstname,CHAR_LENGTH(firstname) AS length FORM persons;
+
+SELECT firstname,CHAR_LENGTH(firstname) AS 'length' FORM persons;
+
+_________________________________________________________
+
+
+=>CHAR_LENGTH() with CONCAT()
+
+SELECT CONCAT(firstname,' is ',CHAR_LENGTH(firstname),' characters long') FROM persons;
+
+SELECT CONCAT(firstname,' = ',CHAR_LENGTH(firstname)) FROM persons;
+
+
+
+
+
+
+
+
+***SQL FORMAT***
+http://sql-format.com/

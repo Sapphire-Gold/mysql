@@ -1,0 +1,94 @@
+=>RIGHT JOIN
+
+=Syntax
+SELECT coloumns 
+FROM table1
+RIGHT JOIN table2
+ON table1.column = table2.column;
+
+____________________________________________________________
+
+=>LEFT JOIN
+SELECT * FROM customers
+LEFT JOIN orders
+IB cusotmer.id = orders.customer_id;
+
+=>RIGHT JOIN
+SELECT * FROM customers
+RIGHT JOIN orders
+ ON customers.id = orders.customer_id;
+
+=>LEFT JOIN
+SELECT * FROM orders
+LEFT JOIN customers
+IB cusotmer.id = orders.customer_id;
+
+=>RIGHT JOIN
+SELECT * FROM orders
+RIGHT JOIN customers
+IB cusotmer.id = orders.customer_id;
+
+
+SELECT firstname,lastname,orderdate,amount
+FROM customers
+RIGHT JOIN orders
+ON customers.id = orders.customer_id;
+
+
+SELECT firstname,lastname,orderdate,amount
+FROM customers
+RIGHT JOIN orders
+ON customers.id = orders.customer_id
+GROUP BY customers.id;
+
+
+SELECT firstname,lastname,orderdate,SUM(amount),COUNT(*)
+FROM customers
+RIGHT JOIN orders
+ON customers.id = orders.customer_id
+GROUP BY customers.id;
+
+SELECT firstname,lastname,orderdate,SUM(amount) AS 'total_amount',COUNT(*)
+FROM customers
+RIGHT JOIN orders
+ON customers.id = orders.customer_id
+GROUP BY customers.id
+ORDER BY total_amount DESC;
+
+__________________________________________________________
+
+=REMARK
+
+=>LEFT JOIN
+SELECT * FROM custoemrs
+LEFT JOIN orders
+ON customers.id = orders.customer_id;
+
+
+=>LEFT OUTER JOIN
+SELECT * FROMcustoemrs
+LEFT OUTER JOIN orders
+ON customers.id = orders.customer_id;
+
+
+=>RIGHT JOIN
+SELECT * FROMcustoemrs
+RIGHT JOIN orders
+ON customers.id = orders.customer_id;
+
+=>RIGHT OUTER JOIN
+SELECT * FROMcustoemrs
+RIGHT OUTER JOIN orders
+ON customers.id = orders.customer_id;
+
+
+=>LEFT JOIN 
+SELECT customers.firstname,customers.lastname,orderdate,amount FROM customers
+LEFT JOIN orders
+ON customers.id = orders.customer_id;
+
+SELECT customers.firstname,customers.lastname,order.orderdate,order.amount FROM customers
+LEFT JOIN orders
+ON customers.id = orders.customer_id;
+
+____________________________________________________________________

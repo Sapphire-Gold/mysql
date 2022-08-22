@@ -1,0 +1,57 @@
+
+
+SERVER LOGIN
+
+CMD
+
+USNAME= ssh wdf5354@dltmyanmar.com
+
+USER NAME = ssh dlt@dltmyanmar.com (or) ssh dlt@157.230.240.154
+password  = datalandtechnology
+
+putty
+
+host name =dltmyanmar.com  (or) 157.230.240.154
+
+login user name = wdf5354
+password = datalandtechnology
+
+winscp
+host name =dltmyanmar.com
+or 157.230.240.154
+
+username = dlt
+password = datalandtechnology
+______________________________________________________________
+
+=>DATABASE LOGIN
+
+ (Method 1)
+mysql -uWDF5354 -p (-u ka username)(-p ka password)
+
+ 
+ (Method 2)
+ mysql -u WDF5354 -p
+
+
+ =>VERSION CHECK
+
+ (Method 1 =in sever)
+ mysql -V
+
+ (Method 2 =in mysql)
+ help;   <shortcut= /h>
+ status;  </s>
+
+ _______________________________________________________________
+
+ ==>Arimethric Operator
+
+ Operator           Meaning                             Operator on                             
+
+ +   (Add)          (Adding)                              Numeric Value
+ -  (Subtract)      (Subtraction)                         Numeric Value
+ x  (Multiply)      (Multiplication)                      Numeric Value
+ /   (Divide)       (Division)                            Numeric Value
+ %   (Modulus)      (Returns remainder of a divison)       Numeric Value
+

@@ -1,0 +1,78 @@
+=>REPLACE  ( Replace parts of strings for Result )
+
+REPLACE Syntax  = REPLACE(value,old,new)
+
+SELECT REPLACE('Hello World','Hell','Zer');
+
+_________________________________________________________
+
+SELECT REPLACE('Tin Htut Aung','Aung','Maung');
+
+*no action    (Case Sensitive)
+SELECT REPLACE('Hello World','hell','Zer');
+
+*no action    (Case Sensitive)
+SELECT REPLACE('Hello World','hello','Zer');
+
+
+*effect all values
+SELECT REPLACE('Hello World','o','0');
+
+*effect all values
+SELECT REPLACE('Hello World','o','A');
+
+*no action,no error
+SELECT REPLACE('Hello World','0','A');
+
+*Case Sensitive
+SELECT REPLACE('HellO World','0','*');
+
+SELECT REPLACE('HellO World','l','7');
+
+*Can replace the common wordss in spaces
+SELECT REPLACE('cheese bread coffee milk',' ','and');
+SELECT REPLACE('cheese bread coffee milk',' ',' and ');
+
+_________________________________________________________
+
+=>REPLACE() WITH SUBSTRING()/SUBSTR() and CONCAT
+
+SELECT * FROM persons;
+
+SELECT REPLACE(city,'m','M') FROM persons;
+
+SELECT REPLACE(city,'m','M') AS hometown FROM persons;
+
+SELECT REPLACE(city,'m','M') AS 'Home Town' FROM persons;
+
+
+
+=>REPLACE() WITH SUBSTRING()/SUBSTR() and CONCAT
+
+SELECT * FROM persons;
+
+SELECT SUBSTRING(REPLACE(city,'m','M'),1,5) FROM persons;
+
+SELECT SUBSTR(REPLACE(address,'n','N'),1,5) FROM persons;
+
+
+
+SELECT CONCAT(SUBSTR(REPLACE(address,'n','N'),1,5),'...') FROM persons;
+
+
+SELECT CONCAT(SUBSTR(REPLACE(address,'n','N'),1,5),'...') AS 'Short Address' FROM persons;
+
+--------------------------------------------------------
+EXE
+
+mandalay
+
+REPLACE('madalay','m','M') ;
+*Mandalay
+
+CONCAT(REPLACE('madalay','m','M'),'...' );
+*Mandalay...
+
+SUBSTR(CONCAT(REPLACE('madalay','m','M'),'...' ),1,5);
+*Manda
+
